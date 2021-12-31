@@ -39,7 +39,6 @@ export class UserService {
       );
       const data = (await response.text()) as string;
       const win = data.match(/승리한 게임 \d+회/);
-      console.log(win);
       return win[0];
     } catch (e) {
       console.error(e);
